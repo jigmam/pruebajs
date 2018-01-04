@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en-US" dir="ltr">
+	<head>
+		<title>Jigmam Soluciones</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="Imagenes/Icono.png" rel="shortcut icon">
+		<link rel="stylesheet" href="Hojas css/Base.css">
+	</head>
+	<body>
+		<div id="contenedor">
+		<header>
+			<img src="imagenes/Icono.png" width="20%">
+		</header>
+		<nav>
+
+		</nav>
+		<br>
+		<section>
+		</section>
+		<br>
+		<br>
+		</div>
+		<footer>
+  		</footer>
+		<script type="text/javascript">
+			function crearDireccion(e,direcciones){
+				$("section").load(direcciones);
+			}
+			function crearMenu(){
+				var columnas=["Productos","Contacto","Acerca de"];
+				var direcciones=["Productos.html","Contacto.html","Acerca_de.html"];
+				var i;
+				$("header").append("<nav id='barramenu'></nav>");
+				$("barramenu").css("width","70%");
+				$("section").load(direcciones[0]);
+				for(i=0;i<columnas.length;i++){
+					var direccion = 'crearDireccion(this,"' + direcciones[i] + '")';
+					var text = "<button class='menu' onclick='"+ direccion + "'>" + columnas[i] + "</button>";
+					$("#barramenu").append(text);
+					$(".menu").css("width",100/columnas.length + "%");
+				}
+			}
+			$(document).ready(function(){
+				crearMenu();
+				$("footer").load("Contenido/Copyright.txt");
+			});
+		</script>
+
+  	</body>
+</html>

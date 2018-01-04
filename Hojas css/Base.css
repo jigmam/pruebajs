@@ -1,0 +1,37 @@
+body {
+	background: linear-gradient(to bottom right, #66ff99 0%, #006699 100%);
+	}
+h1 {
+	color: black;
+	}
+p{
+	font-size: 1vw;
+	font-family: console,Lucida console;
+}
+header{
+	width: 100%;
+}
+.menu{
+	border:hidden;
+	font-size:3vw;
+	font-family: console,Lucida console;
+	overflow: auto;
+	float: letf;
+	width: 25%;
+}
+.menu:hover{
+	border:hidden;
+	font-size: 3vw;
+	color:white;
+	background-color:grey;
+	width: 25%;
+}
+#contenedor{
+	width: 100%;
+	height: auto;
+}
+section{
+}
+footer{
+	display: block;
+}
