@@ -1,52 +1,17 @@
 <!doctype html>
-
-<html lang="en-US" dir="ltr">
-	<head>
-		<title>Jigmam Soluciones</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="Imagenes/Icono.png" rel="shortcut icon">
-		<link rel="stylesheet" href="Hojas css/Base.css">
-	</head>
-	<body>
-		<div id="contenedor">
-		<header>
-			<img src="Imagenes/Icono.png" width="20%">
-		</header>
-		<nav>
-
-		</nav>
-		<br>
-		<section>
-		</section>
-		<br>
-		<br>
-		</div>
-		<footer>
-  		</footer>
-		<script type="text/javascript">
-			function crearDireccion(e,direcciones){
-				$("section").load(direcciones);
-			}
-			function crearMenu(){
-				var columnas=["Productos","Contacto","Acerca de"];
-				var direcciones=["Productos.html","Contacto.html","Acerca_de.html"];
-				var i;
-				$("header").append("<nav id='barramenu'></nav>");
-				$("barramenu").css("width","70%");
-				$("section").load(direcciones[0]);
-				for(i=0;i<columnas.length;i++){
-					var direccion = 'crearDireccion(this,"' + direcciones[i] + '")';
-					var text = "<button class='menu' onclick='"+ direccion + "'>" + columnas[i] + "</button>";
-					$("#barramenu").append(text);
-					$(".menu").css("width",100/columnas.length + "%");
-				}
-			}
-			$(document).ready(function(){
-				crearMenu();
-				$("footer").load("Contenido/Copyright.txt");
-			});
-		</script>
-
-  	</body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Luz Violeta</title>
+  <base href="/">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+<script src="runtime.js" defer></script><script src="polyfills.js" defer></script><script src="styles.js" defer></script><script src="vendor.js" defer></script><script src="main.js" defer></script></body>
 </html>
